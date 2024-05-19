@@ -1,0 +1,2 @@
+grep "ERROR" sample.log | awk '{print $1, $2, substr($0, index($0, $4))}'
+

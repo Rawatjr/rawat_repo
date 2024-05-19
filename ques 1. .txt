@@ -1,0 +1,14 @@
+ques 1. 
+Initialize a new Git repository in a directory of your choice. Add a simple text file to the repository and make the first commit.
+
+sol.
+
+1.cd Desktop
+2.mkdir rawat_git
+3.cd rawat_git
+4.git init
+5.nano first.txt
+"Hello this is first git text file"
+6.git add first.txt
+7.git commit -m "first commit"
+

@@ -1,0 +1,13 @@
+Branch Creation and Switching
+
+Create a new branch named 'feature' and switch to it. Make changes in the 'feature' branch and commit them.
+
+sol:
+1.cd rawat_git
+2.git checkout -b feature
+3.nano second.txt
+"this is a new feature"
+4.git checkout feature
+5.git add second.txt
+6.git commit -m "feature"
+

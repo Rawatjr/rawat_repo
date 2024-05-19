@@ -1,0 +1,14 @@
+ Feature Branches and Hotfixes
+
+Create a 'hotfix' branch to fix an issue in the main code. Merge the 'hotfix' branch into 'main' ensuring that the issue is resolved.
+
+sol:
+1.cd rawat_git
+2.git checkout -b hotfix
+3.git add first.txt
+4.git commit -m "Fixed the issue"
+5.git checkout main
+6.git merge hotfix
+
+
+

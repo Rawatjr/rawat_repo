@@ -31,3 +31,20 @@ async def main():
             print(await response.json())
 loop = asyncio.get_event_loop()
 loop.run_until_complete(main())
+
+
+
+[4:59 pm] Harsha Khande (Unverified)
+import grequests
+reqs = []
+for ship_id in range(0, 50):
+    reqs.append(grequests.get(f'https://swapi.dev/api/starships/{ship_id}/'))
+for r in grequests.map(reqs):
+    print(r.json())
+
+
+[4:59 pm] Harsha Khande (Unverified)
+import httpx
+data = {"name": "John Kennedy"}
+r = httpx.post('https://httpbin.org/post', json=data)
+print(r.json())

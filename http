@@ -1,0 +1,33 @@
+[4:35 pm] Harsha Khande (Unverified)
+import json
+import urllib3
+data = {"name": "John Kennedy"}
+http = urllib3.PoolManager()
+encoded_data = json.dumps(data).encode('utf-8')
+r = http.request(
+    'POST',
+    'https://httpbin.org/post',
+     body= encoded_data,
+     headers={"ContentType": 'application/json'}
+)
+print(json.loads(r.data.decode('utf-8')))
+
+
+[4:35 pm] Harsha Khande (Unverified)
+import json
+import requests
+data = {"name": "John Kennedy"}
+r  = requests.post('https://httpbin.org/post', json=data)
+print(r.json())
+ 
+
+[4:35 pm] Harsha Khande (Unverified)
+import asyncio
+import aiohttp
+data = {"name": "John Kennedy"}
+async def main():
+    async with aiohttp.ClientSession() as session:
+        async with session.post('https://httpbin.org/post',json=data) as response:
+            print(await response.json())
+loop = asyncio.get_event_loop()
+loop.run_until_complete(main())
